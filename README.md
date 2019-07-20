@@ -1,5 +1,7 @@
 # answer
 
+ans1
+
 import numpy as np  #调取矩阵库,并定义np为矩阵
 
 matrixA=[]           #定义list：matrixA
@@ -18,3 +20,20 @@ matrixB = np.array(matrixB)
 ans = matrixA.dot(matrixB)     #矩阵A乘以B
 sorted(ans)             #按从大到小顺序排列
 np.savetxt("Q1_ans.txt", ans, fmt="%d", delimiter="\r\n")  #将矩阵np保存为txt文本形式
+
+
+ans2
+
+from PIL import Image
+
+lena = Image.open("lena.png")
+lena_modified = Image.open("lena_modified.png")
+
+w, h = lena.size
+for j in range(h):
+    for i in range(w):
+        if lena.getpixel((i, j)) == lena_modified.getpixel((i, j)):
+            lena_modified.putpixel((i, j), 255)
+
+lena_modified.show()
+lena_modified.save("ans_two.png")

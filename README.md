@@ -27,6 +27,7 @@ sorted(ans)             #按从大到小顺序排列
 np.savetxt("Q1_ans.txt", ans, fmt="%d", delimiter="\r\n")  #将矩阵np保存为txt文本形式
 
 
+
 ans2
 
 from PIL import Image
